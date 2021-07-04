@@ -1,0 +1,53 @@
+.frstblock {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  background-image: url(img/s4i1.png);
+  @extend %background;
+  &__cont {
+    @extend %sectionSpain_cont;
+    left: 18%;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &__about {
+    @extend %sectionSpain_about;
+  }
+  &__title {
+    @extend %sectionSpain_title;
+  }
+  &__text {
+    @extend %sectionSpain_text;
+  }
+  &__button {
+    @extend %sectionSpain_button;
+  }
+}
+@media (max-width: 850px) {
+  .frstblock__cont {
+    @include t-l(15%, 15%);
+    width: 70%;
+  }
+  .frstblock__button {
+    width: 30%;
+    height: 6vw;
+  }
+  .frstblock__text {
+    line-height: 3vw;
+  }
+}
+@media (max-width: 500px) {
+  .frstblock__cont {
+    @include t-l(20%, 5%);
+    width: 90%;
+  }
+  .frstblock__button {
+    width: 70%;
+    height: 12vw;
+    top: 80%;
+  }
+  .frstblock__text {
+    line-height: 7vw;
+  }
+}

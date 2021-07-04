@@ -1,0 +1,92 @@
+$font-Josefin: "Josefin Sans", sans-serif;
+$font-Aleo: "Aleo", serif;
+$weight300: 300;
+$weight400: 400;
+$weight700: 700;
+$f-z42: calc(14px + 28 * (100vw / 1770));
+$f-z36: calc(14px + 22 * (100vw / 1770));
+$f-z24: calc(14px + 10 * (100vw / 1770));
+$f-z22: calc(12px + 10 * (100vw / 1770));
+$f-z20: calc(14px + 6 * (100vw / 1770));
+$f-z16: calc(14px + 2 * (100vw / 1770));
+$f-z14: calc(12px + 2 * (100vw / 1770));
+@mixin font($f-y, $w-t, $s-z) {
+  font-family: $f-y;
+  font-weight: $w-t;
+  font-size: $s-z;
+}
+@mixin t-l($t, $l) {
+  top: $t;
+  left: $l;
+}
+@mixin lspsn-clr($lspsn, $clr) {
+  letter-spacing: $lspsn;
+  color: $clr;
+}
+%background {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+%sectionSpain_button {
+  background: linear-gradient(
+    55deg,
+    #496bfe 0%,
+    #496bfe 40%,
+    #5474fd 40%,
+    #5474fd 100%
+  );
+  bottom: none;
+  font-size: calc(12px + 4 * (100vw / 1770));
+  font-family: "Aleo", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+  font-weight: 400;
+  color: #fff;
+  height: 3.5vw;
+  width: 40%;
+  position: absolute;
+  z-index: 1;
+  top: 73%;
+  left: 7.4%;
+  &:hover {
+    transition: 2s;
+    background: linear-gradient(45deg, #005bea, #00c6fb);
+  }
+}
+%sectionSpain_about {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: calc(14px + 6 * (100vw / 1770));
+  color: white;
+  left: 7.4%;
+  top: 13.5%;
+}
+%sectionSpain_title {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: calc(14px + 6 * (100vw / 1770));
+  text-transform: uppercase;
+  color: white;
+  top: 27%;
+  left: 7.4%;
+}
+%sectionSpain_text {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: calc(12px + 4 * (100vw / 1770));
+  color: white;
+  top: 40.5%;
+  left: 7.4%;
+  right: 4.5%;
+  line-height: 1.5vw;
+}
+%sectionSpain_cont {
+  width: 31%;
+  height: 53%;
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.7);
+  top: 32%;
+}

@@ -1,0 +1,257 @@
+.home {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  background-image: url(img/title_wrapper.png);
+  @extend %background;
+  &__caption {
+    @include font($font-Josefin, $weight700, $f-z42);
+    @include t-l(32%, 41%);
+    @include lspsn-clr(0.5vw, white);
+    text-transform: uppercase;
+    position: absolute;
+  }
+  &__subcaption {
+    @include font($font-Josefin, $weight400, $f-z22);
+    @include t-l(38%, 41%);
+    @include lspsn-clr(0.3vw, white);
+    position: absolute;
+  }
+  &__form {
+    border: none;
+  }
+  &__search {
+    @include font($font-Josefin, $weight400, $f-z14);
+    @include t-l(47%, 31%);
+    @include lspsn-clr(0.1vw, black);
+    width: 39%;
+    height: 3.5vw;
+    position: absolute;
+    outline: none;
+  }
+  input::placeholder {
+    text-indent: 20%;
+    color: #c2c2c2;
+  }
+  input:focus::placeholder {
+    opacity: 0;
+    transition: 0.7s ease;
+  }
+  &__submit {
+    @include font($font-Aleo, $weight400, $f-z16);
+    @include t-l(47.48%, 60.8%);
+    @include lspsn-clr(0.1vw, white);
+    text-transform: uppercase;
+    background-color: #5474fd;
+    width: 9%;
+    height: 3.1vw;
+    position: absolute;
+    border: none;
+    text-indent: -20px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__icon {
+    position: absolute;
+    @include t-l(48.8%, 67.5%);
+  }
+  &__scroll {
+    position: absolute;
+    @include t-l(69%, 47%);
+    animation: scroll 3s 1s;
+  }
+  @keyframes scroll {
+    from {
+      top: 69%;
+    }
+    to {
+      top: 75%;
+    }
+  }
+  &__textscrl {
+    @include font($font-Josefin, $weight400, $f-z14);
+    @include lspsn-clr(0.2vw, white);
+    padding-bottom: 10%;
+  }
+  &__iconscrl {
+    padding-left: 40%;
+    animation: scroll 3s alternate;
+  }
+  &__buttonburg {
+    display: none;
+  }
+  &__menu {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    background-color: #5474fd;
+    z-index: 50;
+  }
+  &__logo {
+    @include font($font-Josefin, $weight700, $f-z24);
+    @include t-l(20%, 18%);
+    @include lspsn-clr(0.2vw, white);
+    padding-top: 1%;
+    text-transform: uppercase;
+    position: absolute;
+  }
+  &__list {
+    margin-right: 18%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2%;
+  }
+  &__item {
+    @include font($font-Aleo, $weight400, $f-z14);
+    text-decoration: none;
+    padding: 1.5vw;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: underline 2px solid white;
+    }
+  }
+}
+#check-menu {
+  display: none;
+}
+@media (max-width: 1060px) {
+  .home__buttonburg {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    @include t-l(20px, 20px);
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .home__buttonburg > span,
+  .home__buttonburg > span::before,
+  .home__buttonburg > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+  }
+  .home__buttonburg > span::before {
+    content: "";
+    top: -8px;
+  }
+  .home__buttonburg > span::after {
+    content: "";
+    top: 8px;
+  }
+  .home__list {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: white;
+  }
+  .home__item {
+    display: block;
+    padding: 20px 30px;
+    color: #5474fd;
+  }
+  .home__item:hover {
+    background-color: #5474fd;
+    color: white;
+    text-decoration: none;
+  }
+  #check-menu:checked ~ .home__buttonburg > span {
+    transform: rotate(45deg);
+  }
+  #check-menu:checked ~ .home__buttonburg > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #check-menu:checked ~ .home__buttonburg > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #check-menu:checked ~ .home__list {
+    visibility: visible;
+    left: 0;
+  }
+  .home__buttonburg > span,
+  .home__buttonburg > span::before,
+  .home__buttonburg > span::after {
+    transition-duration: 0.25s;
+  }
+  .home__list {
+    transition-duration: 0.25s;
+  }
+  .home__item {
+    transition-duration: 0.25s;
+  }
+  .home__menu {
+    background-color: transparent;
+  }
+  .home__logo {
+    display: none;
+  }
+  .home__search {
+    height: 5vw;
+  }
+  .home__submit {
+    @include t-l(55%, 40%);
+    width: 20%;
+    height: 5vw;
+    text-indent: 1vw;
+  }
+  .home__icon {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  .home__caption {
+    @include t-l(20%, 37%);
+  }
+  .home__subcaption {
+    @include t-l(30%, 36%);
+  }
+  .home__search {
+    left: 21%;
+    height: 8vw;
+    width: 60%;
+  }
+  .home__submit {
+    @include t-l(60%, 35%);
+    width: 30%;
+    height: 6vw;
+    text-indent: 1vw;
+  }
+  .home__scroll {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home__caption {
+    @include t-l(25%, 29.5%);
+  }
+  .home__subcaption {
+    @include t-l(33%, 27.5%);
+  }
+  .home__search {
+    @include t-l(50%, 5%);
+    height: 12vw;
+    width: 90%;
+  }
+  .home__submit {
+    @include t-l(65%, 20%);
+    width: 60%;
+    height: 12vw;
+    text-indent: 1vw;
+  }
+}

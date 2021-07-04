@@ -1,0 +1,161 @@
+.quote {
+  position: relative;
+  min-height: 730px;
+  background-image: url(img/quote_wrap.png);
+  @extend %background;
+  &__block {
+    width: 63%;
+    max-height: 100%;
+    top: 33%;
+    left: 18%;
+    background-color: #333333;
+    position: absolute;
+  }
+  &__img {
+    width: 40%;
+  }
+  &__title {
+    @include font($font-Aleo, $weight400, $f-z36);
+    @include t-l(16%, 40%);
+    @include lspsn-clr(0.1vw, white);
+    position: absolute;
+  }
+  &__subtitle {
+    @include font($font-Josefin, $weight400, $f-z20);
+    @include lspsn-clr(0, white);
+    @include t-l(15%, 46%);
+    position: absolute;
+    text-transform: uppercase;
+  }
+  &__text {
+    @include font($font-Josefin, $weight300, $f-z16);
+    @include lspsn-clr(0, white);
+    @include t-l(38%, 46%);
+    position: absolute;
+    width: 50%;
+    line-height: 1.4vw;
+    text-indent: 5%;
+    text-align: justify;
+  }
+}
+.fa-quote-left {
+  color: #5474fd;
+  position: absolute;
+  @include t-l(35%, 46%);
+}
+@media (max-width: 1170px) {
+  .quote__block {
+    top: 21%;
+    width: 40%;
+    left: 30%;
+    height: 70%;
+  }
+  .quote__img {
+    width: 100%;
+  }
+  .quote__subtitle {
+    top: 61%;
+    left: 38%;
+  }
+  .fa-quote-left {
+    left: 9%;
+    top: 68%;
+  }
+  .quote__text {
+    top: 70%;
+    left: 10%;
+    width: 85%;
+    line-height: 1.6vw;
+  }
+  .quote__title {
+    top: 12%;
+    left: 36%;
+  }
+}
+@media (max-width: 1040px) {
+  .quote__subtitle {
+    top: 56%;
+  }
+  .quote__text {
+    top: 63%;
+  }
+  .fa-quote-left {
+    top: 61%;
+  }
+}
+@media (max-width: 870px) {
+  .quote__subtitle {
+    top: 45%;
+    left: 33%;
+  }
+  .fa-quote-left {
+    top: 48%;
+    left: 7%;
+  }
+  .quote__text {
+    top: 50%;
+    line-height: 2.2vw;
+  }
+  .quote__title {
+    top: 9%;
+    left: 35%;
+  }
+}
+@media (max-width: 680px) {
+  .quote__block {
+    top: 21%;
+    width: 76%;
+    left: 14%;
+    height: 63%;
+  }
+  .quote__subtitle {
+    top: 75%;
+    left: 36%;
+  }
+  .quote__text {
+    width: 88%;
+    left: 8%;
+    top: 80%;
+    line-height: 2.3vw;
+  }
+  .fa-quote-left {
+    top: 78%;
+  }
+}
+@media (max-width: 500px) {
+  .quote__subtitle {
+    top: 58%;
+  }
+  .quote__text {
+    width: 88%;
+    left: 8%;
+    top: 66%;
+    line-height: 3.3vw;
+  }
+  .fa-quote-left {
+    top: 64%;
+  }
+  .quote__title {
+    left: 30%;
+  }
+}
+@media (max-width: 412px) {
+  .quote__subtitle {
+    top: 46%;
+    left: 30%;
+  }
+  .quote__block {
+    top: 18%;
+  }
+  .quote__text {
+    top: 54%;
+    line-height: 5vw;
+  }
+  .fa-quote-left {
+    top: 52%;
+    left: 4%;
+  }
+  .quote__title {
+    left: 25%;
+  }
+}

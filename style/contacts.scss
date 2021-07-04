@@ -1,0 +1,59 @@
+.contacts {
+  min-height: 268px;
+  background-color: #232323;
+  position: relative;
+  &__title {
+    @include font($font-Josefin, $weight700, $f-z24);
+    @include lspsn-clr(0.2vw, white);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5%;
+  }
+  &__subtitle {
+    @include font($font-Josefin, $weight400, $f-z16);
+    @include lspsn-clr(0.1vw, white);
+    padding-top: 0.5%;
+    text-align: center;
+  }
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3vw;
+    justify-content: center;
+    color: white;
+    padding-top: 2%;
+  }
+}
+.fa-facebook-f:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-youtube:hover,
+.fa-pinterest-p:hover {
+  color: #5474fd;
+}
+@media (max-width: 1060px) {
+  .contacts {
+    min-height: 150px;
+  }
+  .contacts__icons {
+    gap: 2vw;
+  }
+}
+@media (max-width: 700px) {
+  .contacts {
+    min-height: 125px;
+  }
+  .contacts__icons {
+    gap: 3.5vw;
+    padding-top: 3%;
+  }
+}
+@media (max-width: 480px) {
+  .contacts {
+    min-height: 100px;
+  }
+  .contacts__icons {
+    gap: 4.5vw;
+    padding-top: 5%;
+  }
+}

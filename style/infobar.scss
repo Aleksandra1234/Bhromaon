@@ -1,0 +1,54 @@
+.infobar {
+  min-height: 335px;
+  background-color: #333333;
+  position: relative;
+  &__items {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-top: 6%;
+    text-align: center;
+    z-index: 1;
+  }
+  &__text {
+    @include font($font-Aleo, $weight400, $f-z36);
+    padding-top: 15%;
+    color: #fff;
+  }
+  &__line {
+    position: absolute;
+    z-index: 2;
+    top: 7%;
+    width: 37%;
+    left: 31%;
+  }
+  &__img {
+    width: 30%;
+  }
+}
+@media (max-width: 1060px) {
+  .infobar__items {
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 15%;
+  }
+  .infobar__line {
+    width: 64%;
+    left: 17%;
+    top: 20%;
+  }
+}
+@media (max-width: 850px) {
+  .infobar__line {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .infobar {
+    min-height: 215px;
+  }
+}
